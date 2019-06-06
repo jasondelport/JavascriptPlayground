@@ -17,12 +17,20 @@ function breakWorld() {
 
 function loopExample() {
 	let promises = [];
-	[1,2,3,4,5].forEach(item => {
-		promises.push(helloWorld(item).then(console.log('finished ', item)));
+	[1, 2, 3, 4, 5].forEach(item => {
+		// notice the chained promises here
+		let chain = helloWorld('-' + item + '-')
+			.then(response => helloWorld('-' + response + '-'))
+			.then(response => {
+				console.log('finished ', item, response);
+				return '-' + response + '-';
+			});
+		promises.push(chain);
 	});
 	return Promise.all(promises);
 }
 
+// async functions always return a promise
 async function main() {
 	const msg = await helloWorld('hello1');
 	console.log('Message -> ', msg);
@@ -32,9 +40,11 @@ async function main() {
 	});
 
 	await helloWorld('hello3').then(() => breakWorld()).then((result => console.log(result))).catch((error) => console.error(error));
+
+	const [a,b,c,d,e] = await loopExample().then(console.log('completed'));
+	console.log('results -> ', e);
 	
-	const results = await loopExample().then(console.log('completed'));
-	console.log(results);
+	return "done";
 }
 
-main();
+main().then(result => console.log(result));

@@ -1,3 +1,24 @@
+const array = [1,2,3,4,5];
+
+for (let i = 0; i < array.length; i++) {
+	console.log(array[i]);
+}
+
+// for iterating properties of an array OR string
+for (let item of array) {
+	console.log(item);
+}
+
+let object = {
+  id: '1',
+  type: 'Code',
+  name: 'Jason'
+};
+// for iterating properties of an object OR string
+for (let key in object) {
+	console.log(key + " -> " + object[key]);
+}
+
 [1,2,3].forEach(function(item, index, array) {
 	console.log(item, index, array);
 });

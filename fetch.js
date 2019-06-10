@@ -1,3 +1,5 @@
+const fetch = require('fetch');
+
 async function fetchUsers(endpoint) {
 	console.log(endpoint);
 	const response = await fetch(endpoint, {

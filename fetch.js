@@ -1,4 +1,4 @@
-const fetch = require('fetch');
+const fetch = require('node-fetch');
 
 async function fetchUsers(endpoint) {
 	console.log(endpoint);

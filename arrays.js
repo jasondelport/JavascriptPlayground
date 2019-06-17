@@ -42,7 +42,7 @@ const evens = [1, 2, 3, 4, 5, 6].filter(function(item) {
 console.log(evens);
 
 const evens1 = [1, 2, 3, 4, 5, 6].filter(item => item % 2 === 0);
-console evens1;
+console.log(evens1);
 
 const sum = [1, 2, 3, 4, 5, 6].reduce(function(result, item) {
 	return result + item;

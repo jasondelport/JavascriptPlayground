@@ -12,6 +12,7 @@ async function fetchUsers(endpoint) {
 
 	data = data.map(user => user.username);
 
+	// this is returned as a promise by default;
 	return data;
 }
 

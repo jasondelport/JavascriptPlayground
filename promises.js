@@ -37,9 +37,14 @@ async function main() {
 
 	await helloWorld('hello2').then((result) => {
 		console.log(result)
-	});
+	})
+	.finally(() => console.log('all done.'));
 
-	await helloWorld('hello3').then(() => breakWorld()).then((result => console.log(result))).catch((error) => console.error(error));
+	await helloWorld('hello3')
+	.then(() => breakWorld())
+	.then((result => console.log(result)))
+	.catch((error) => console.error(error))
+	.finally(() => console.log('all done.'));
 
 	const [a,b,c,d,e] = await loopExample().then(console.log('completed'));
 	console.log('results -> ', e);

@@ -49,6 +49,13 @@ const sum = [1, 2, 3, 4, 5, 6].reduce(function(result, item) {
 }, 5); // this is the starting value
 console.log(sum);
 
+const uniqueArray = [1, 2, 2, 3, 4, 4, 5, 5, 5, 6].filter((item, pos, ar) => {
+	// console.log(item, pos, ar);
+	// indexOf() method returns the first index at which a given element can be found in the array
+	return ar.indexOf(item) === pos;
+});
+console.log("unique array -> " + uniqueArray);
+
 const hasNeg = [1, 2, 3, 4, -1, 6].some(function(item) {
 	return item < 0;
 });

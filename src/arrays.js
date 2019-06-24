@@ -1,5 +1,6 @@
 //https://medium.com/siliconwat/data-structures-in-javascript-1b9aed0ea17c
 // https://javascript.info/map-set-weakmap-weakset
+//https://codeburst.io/array-vs-set-vs-map-vs-object-real-time-use-cases-in-javascript-es6-47ee3295329b
 
 const array = [1, 2, 3, 4, 5];
 

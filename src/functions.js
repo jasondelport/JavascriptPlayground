@@ -91,3 +91,15 @@ function showInfo(id, name, surname) {
 	}
 }
 console.log(showInfo(22, "Jason", "Delport"));
+
+
+const isUnd = value => value === 0 ? 0 : value || '';
+
+console.log(isUnd(0));
+console.log(isUnd(undefined));
+console.log(isUnd('hello'));
+console.log(isUnd(5));
+console.log(isUnd());
+console.log(isUnd(null))
+	
+

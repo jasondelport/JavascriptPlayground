@@ -122,10 +122,11 @@ for (let value of map.values()) {
 	console.log(value);
 }
 
+let objArray = [{id:1},{id:2},{id:1}];
 
-
-
-
-
-
+// combining
+let unique = objArray.filter((item, position, array) => {
+	return array.map(mapObj => mapObj['id']).indexOf(item['id']) === position;
+});
+console.log(unique);
 

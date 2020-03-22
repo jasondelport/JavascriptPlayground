@@ -13,4 +13,6 @@ https://4comprehension.com/busy-developers-guide-to-java-9-10-11-12-13-and-above
 https://levelup.gitconnected.com/javascript-clean-code-objects-and-classes-49eb5a30e242      
 
 
-
+See.    
+    
+https://hackernoon.com/16-javascript-protips-2020-edition-n7et32dd.   

@@ -52,3 +52,19 @@ export default {
     hello,
     world
 }
+
+/*
+// same as above syntax
+const funcs = {
+    hello() {console.log('Hello'); }
+    world() {console.log('World'); }
+}
+
+export default funcs
+
+ // --OR--
+
+export function hello() {console.log('Hello'); }
+export function world() {console.log('World'); }
+
+*/

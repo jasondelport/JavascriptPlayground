@@ -1,4 +1,5 @@
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
+// https://www.sitepoint.com/understanding-module-exports-exports-node-js/
 /*
 import defaultExport from "module-name";
 import * as name from "module-name";
@@ -12,12 +13,14 @@ import defaultExport, * as name from "module-name";
 import "module-name";
 var promise = import("module-name");
 */
-// ES5, scans node_modules by default
+// ES5, scans node_modules by default, CommonJS format
 // const greetings = require("exports");
 
-// ES6, only scans node_modules if using babel, this may change in future
+// ES6, only scans node_modules if using babel, this may change in future, ES Module (ESM) format
 import { config, configurations } from "./config.js";
-import * as greetings from "./exports.js";
+//import * as greetings from "./exports.js";
+import greetings from "./exports.js";
+
 
 console.log(configurations['sandbox'].username);
 console.log(config.username);

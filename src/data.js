@@ -35,6 +35,12 @@ mp.set({id:1}, 3);
 mp.set([1,2], 'buzz');
 export const map = mp;
 
+// SET
+// A Set is a collection of unique values. Unlike a Map, a Set is conceptually
+// more similar to an Array than an Object, since it is a list of values and 
+// not key/value pairs. However, Set is not a replacement for Arrays, 
+// but rather a supplement for providing additional support for working with duplicated data. 
+
 const set1 = new Set(['1', '2', '3']);
 const set2 = new Set([{1: 'one'}, {2: 'two'}, {3: 'three'}]);
 

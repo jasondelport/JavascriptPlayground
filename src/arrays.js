@@ -104,11 +104,14 @@ console.log(`findIndex -> ${JSON.stringify(data.array4[foundIndex])}`);
 // map
 console.log('==========map=========')
 const map = data.map;
+console.log(`size => ${map.size}`) // 6
+console.log(map.delete(1)) // true
+console.log(`size after delete => ${map.size}`) // 5
 console.log(map.has(100)) // false
 console.log(map.has({id:1})) // false
 console.log(map.has([1,2])) // false
 console.log(map.has("0")) // false
-console.log(map.get('0')) // "foo"
+console.log(map.get('0'));// "foo"
 
 for (const entry of data.map.entries()) {
   console.log(`map entry -> ${entry}`);
@@ -129,3 +132,11 @@ for (let key of data.map.keys()) {
 for (let value of data.map.values()) {
 	console.log(`value -> ${value}`);
 }
+
+for (const [key, value] of data.map) {
+	// Log the keys and values of the Map with for...of
+	console.log(`${key}: ${value}`)
+  }
+
+map.clear()
+console.log(`size after clear => ${map.size}`); // 0

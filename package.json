@@ -10,8 +10,13 @@
     "https": "^1.0.0"
   },
   "devDependencies": {},
+  "config": {
+    "port": "8080"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "echo": "echo \"Hello $npm_config_first process.env.middle $npm_config_last\"",
+    "demo": "SERVER=development node src/index.js",
+    "check-env": "node -e 'console.log(process.env)' | grep npm"
   },
   "repository": {
     "type": "git",

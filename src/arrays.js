@@ -1,6 +1,6 @@
-//https://medium.com/siliconwat/data-structures-in-javascript-1b9aed0ea17c
+// https://medium.com/siliconwat/data-structures-in-javascript-1b9aed0ea17c
 // https://javascript.info/map-set-weakmap-weakset
-//https://codeburst.io/array-vs-set-vs-map-vs-object-real-time-use-cases-in-javascript-es6-47ee3295329b
+// https://codeburst.io/array-vs-set-vs-map-vs-object-real-time-use-cases-in-javascript-es6-47ee3295329b
 
 import data from "./data.js";
 
@@ -34,18 +34,27 @@ data.array.forEach(function(item) {
 	console.log(item, this);
 }, data.array);
 
+// array functions
+console.log('==========functional list operations=========')
+// map creates a new array by transforming every element in an array, individually
+// filter creates a new array by removing elements that don't belong
+// reduce takes all of the elements in an array and reduces them into a single value.
+
+// returns elements for new list 
 const result = data.array.map(function(item) {
 	return item * 2; // return value
 });
+//const result = data.array.map(item => item * 2);
 console.log(result);
 
+// returns elements for new list if callback return logic is true
 const evens = data.array.filter(function(item) {
 	return item % 2 === 0;
 });
 console.log("filter/evens -> " + evens);
 
 const evens1 = data.array.filter(item => item % 2 === 0);
-console.log(evens1);
+console.log("filter/evens1 -> " + evens1);
 
 const sum = data.array.reduce(function(result, item) {
 	return result + item;
@@ -79,11 +88,14 @@ const foundIndex = data.array4.findIndex(function(item) {
 });
 console.log(JSON.stringify(foundIndex));
 
+// map
+console.log('==========map=========')
+
 for (const entry of data.map.entries()) {
-  console.log(entry);
+  console.log(`map enyty -> ${entry}`);
 }
 
-data.map.forEach(function(value, key, mp) {
+data.map.forEach(function(value, key, map) {
 	console.log(`${key} -> ${value}`)
 });
 

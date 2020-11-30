@@ -25,11 +25,14 @@ export const object = {
     name: 'Jason'
 };
 
+ // set(key, value) – stores the value by the key, returns the map itself. 
+ // map.get(key) – returns the value by the key, undefined if key doesn't exist in map
+
 let mp = new Map([[ 1, 'one' ],[ 2, 'two' ]]);
 mp.set("0", "foo");
-mp.set(1, "bar");
-mp.set({}, "baz");
-mp.set([], 3);
+mp.set(10, "bar");
+mp.set({id:1}, 3);
+mp.set([1,2], 'buzz');
 export const map = mp;
 
 const set1 = new Set(['1', '2', '3']);

@@ -56,64 +56,76 @@ console.log("filter/evens -> " + evens);
 const evens1 = data.array.filter(item => item % 2 === 0);
 console.log("filter/evens1 -> " + evens1);
 
-const sum = data.array.reduce(function(result, item) {
+// returns single value
+const total = data.array.reduce(function(result, item) {
+	console.log(`${result} -> ${item}`)
 	return result + item;
 }, 5); // this is the starting value
-console.log(sum);
+console.log(`reduce -> ${total}`);
 
+// returns elements for new list if callback return logic is true
 const uniqueArray = data.array5.filter((item, position, array) => {
 	console.log(item, position, array, array.indexOf(item) === position);
 	// indexOf() method returns the first index at which a given element can be found in the array
 	return array.indexOf(item) === position; // returns trues
 });
-console.log("unique array -> " + uniqueArray);
+console.log("unique array (filter) -> " + uniqueArray);
 
-const hasNeg = data.array3.some(function(item) {
-	return item < 0;
-});
-console.log(hasNeg);
-
-const allPos = data.array3.every(function(item) {
-	return item > 0;
-});
-console.log(allPos);
-
-const foundObject = data.array4.find(function(item) {
-	return item.id === '2';
-});
-console.log(JSON.stringify(foundObject));
-
-const foundIndex = data.array4.findIndex(function(item) {
-	return item.id === '2';
-});
-console.log(JSON.stringify(foundIndex));
-
-// map
-console.log('==========map=========')
-
-for (const entry of data.map.entries()) {
-  console.log(`map enyty -> ${entry}`);
-}
-
-data.map.forEach(function(value, key, map) {
-	console.log(`${key} -> ${value}`)
-});
-
-for (const entry of data.map) {
-  console.log(entry);
-}
-
-for (let key of data.map.keys()) {
-	console.log(key);
-}
-
-for (let value of data.map.values()) {
-	console.log(value);
-}
-
-// combining
+// combing differents methods, in this cae filter and map
 let unique = data.array4.filter((item, position, array) => {
 	return array.map(mapObj => mapObj['id']).indexOf(item['id']) === position;
 });
 console.log(unique);
 
+// returns boolean
+const hasNeg = data.array3.some(function(item) {
+	return item < 0;
+});
+console.log(`some -> ${hasNeg}`);
+
+// returns boolean
+const allPos = data.array3.every(function(item) {
+	return item > 0;
+});
+console.log(`every -> ${allPos}`);
+
+// returns object in array
+const foundObject = data.array4.find(function(item) {
+	return item.id === '2';
+});
+console.log(`find -> ${JSON.stringify(foundObject)}`);
+
+// returns index int
+const foundIndex = data.array4.findIndex(function(item) {
+	return item.id === '2';
+});
+console.log(`findIndex -> ${JSON.stringify(data.array4[foundIndex])}`);
+
+// map
+console.log('==========map=========')
+const map = data.map;
+console.log(map.has(100)) // false
+console.log(map.has({id:1})) // false
+console.log(map.has([1,2])) // false
+console.log(map.has("0")) // false
+console.log(map.get('0')) // "foo"
+
+for (const entry of data.map.entries()) {
+  console.log(`map entry -> ${entry}`);
+}
+
+data.map.forEach(function(value, key, map) {
+	console.log(`key: ${key} -> value: ${value} -> map: ${map}`);
+});
+
+for (const entry of data.map) {
+	console.log(`entry -> ${entry}`);
+}
+
+for (let key of data.map.keys()) {
+	console.log(`key -> ${key}`);
+}
+
+for (let value of data.map.values()) {
+	console.log(`value -> ${value}`);
+}

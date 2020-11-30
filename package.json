@@ -2,7 +2,7 @@
   "name": "javascriptplayground",
   "version": "1.0.0",
   "description": "learning latest js techniques",
-  "main": "src/arrays.js",
+  "main": "src/index.js",
   "type": "module",
   "dependencies": {
     "http": "^0.0.0",

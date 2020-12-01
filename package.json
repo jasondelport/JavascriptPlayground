@@ -14,7 +14,7 @@
     "port": "8080"
   },
   "scripts": {
-    "echo": "echo \"Hello $npm_config_first process.env.middle $npm_config_last\"",
+    "echo": "echo \"Hello $npm_config_first $npm_config_last\"",
     "demo": "SERVER=development node src/index.js",
     "check-env": "node -e 'console.log(process.env)' | grep npm"
   },

@@ -1,3 +1,5 @@
+// https://www.taniarascia.com/understanding-map-and-set-javascript/
+
 export const array = [1, 2, 3, 4, 5];
 
 export const array3 = [1, 2, 3, 4, -1, 6];

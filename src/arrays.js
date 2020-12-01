@@ -71,7 +71,7 @@ const uniqueArray = data.array5.filter((item, position, array) => {
 });
 console.log("unique array (filter) -> " + uniqueArray);
 
-// combing differents methods, in this cae filter and map
+// combining different methods, filter and map in this case
 let unique = data.array4.filter((item, position, array) => {
 	return array.map(mapObj => mapObj['id']).indexOf(item['id']) === position;
 });

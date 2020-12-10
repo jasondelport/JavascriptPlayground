@@ -1,8 +1,43 @@
 // https://medium.com/siliconwat/data-structures-in-javascript-1b9aed0ea17c
 // https://javascript.info/map-set-weakmap-weakset
 // https://codeburst.io/array-vs-set-vs-map-vs-object-real-time-use-cases-in-javascript-es6-47ee3295329b
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_Collections
 
 import data from "./data.js";
+
+const a1 = [];
+const a2 = new Array();
+const a3 = Array();
+
+const array1 = [1,2,3,4,5,];
+const array2 = new Array(1,2,3,4,5,);
+const array3 = Array(1,2,3,4,5,);
+const array4 = Array.of(1,2,3,4,5,)  
+console.log(array1);
+console.log(array2);
+console.log(array3);
+console.log(array4);
+
+let arr1 = [42] // Creates an array with only one element: the number 42.
+let arr2 = Array(42) // Creates an array with no elements and arr.length set to 42. 
+let arr3 = Array.of(42); // Creates an array with only one element: the number 42.
+
+console.log(arr1); // [ 42 ]
+console.log(arr2); // [ <42 empty items> ]
+console.log(arr3); // [ 42 ]
+
+// You can assign to the array length property.
+let cats = ['Dusty', 'Misty', 'Twiggy']
+console.log(cats.length)  // 3
+
+cats.length = 2
+console.log(cats)  // logs "Dusty, Misty" - Twiggy has been removed
+
+cats.length = 0 
+console.log(cats)  // logs []; the cats array is empty
+
+cats.length = 3 
+console.log(cats)  // logs [ <3 empty items> ]
 
 for (let i = 0; i < data.array.length; i++) {
 	console.log(data.array[i]);

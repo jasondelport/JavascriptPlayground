@@ -1,4 +1,5 @@
 // https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export
+// https://v8.dev/features/modules
 /*
 // Exporting individual features
 export let name1, name2, …, nameN; // also var, const

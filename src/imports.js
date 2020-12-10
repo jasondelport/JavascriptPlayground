@@ -1,5 +1,6 @@
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
 // https://www.sitepoint.com/understanding-module-exports-exports-node-js/
+// https://v8.dev/features/modules
 /*
 import defaultExport from "module-name";
 import * as name from "module-name";

@@ -7,6 +7,7 @@ npm run echo --first=Jason --last=Delport
 SERVER=development npm run demo      
 node src/index.js --helloworld --hello:world     
 node .     
+npm run watch -- --watch // this double dash in the middle forces the command to be passed on the script
 
 https://levelup.gitconnected.com/5-javascript-tricks-that-are-good-to-know-78045dea6678       
 https://4comprehension.com/busy-developers-guide-to-java-9-10-11-12-13-and-above/      
@@ -26,3 +27,4 @@ npm run // lists scripts
 npm dedupe // remove duplicates      
 npm audit fix      
 npm doctor      
+npm completion // create a .sh file that enables the tab completion for the package.json     

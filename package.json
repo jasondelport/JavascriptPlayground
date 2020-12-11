@@ -14,9 +14,16 @@
     "port": "8080"
   },
   "scripts": {
+    "watch": "node src/index.js",
+    "preecho": "echo \"pre\"",
     "echo": "echo \"Hello $npm_config_first $npm_config_last\"",
+    "postecho": "echo \"post\"",
     "demo": "SERVER=development node src/index.js",
-    "check-env": "node -e 'console.log(process.env)' | grep npm"
+    "check-env": "node -e 'console.log(process.env)' | grep npm",
+    "start:test"	: "npm run watch -- 4000",		
+    "start:stage"	: "npm run watch -- 5000",
+    "chain":  "npm run check-env & npm run start:test",
+    "deploy:complex" : "./longdeploy.sh"
   },
   "repository": {
     "type": "git",

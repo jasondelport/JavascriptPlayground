@@ -6,10 +6,9 @@
   "type": "module",
   "dependencies": {
     "http": "^0.0.0",
-    "node-fetch": "^2.6.1",
-    "https": "^1.0.0"
+    "https": "^1.0.0",
+    "node-fetch": "^2.6.1"
   },
-  "devDependencies": {},
   "config": {
     "port": "8080"
   },
@@ -20,10 +19,11 @@
     "postecho": "echo \"post\"",
     "demo": "SERVER=development node src/index.js",
     "check-env": "node -e 'console.log(process.env)' | grep npm",
-    "start:test"	: "npm run watch -- 4000",		
-    "start:stage"	: "npm run watch -- 5000",
-    "chain":  "npm run check-env & npm run start:test",
-    "deploy:complex" : "./longdeploy.sh"
+    "start:test": "npm run watch -- 4000",
+    "start:stage": "npm run watch -- 5000",
+    "chain": "npm run check-env & npm run start:test",
+    "deploy:complex": "./longdeploy.sh",
+    "dev": "(cd server && npm run start) & npm run start"
   },
   "repository": {
     "type": "git",

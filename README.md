@@ -27,4 +27,4 @@ npm run // lists scripts
 npm dedupe // remove duplicates      
 npm audit fix      
 npm doctor      
-npm completion // create a .sh file that enables the tab completion for the package.json     
+npm completion >> ~/.zshrc // enables the tab completion for the package.json     

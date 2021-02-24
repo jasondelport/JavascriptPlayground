@@ -20,8 +20,11 @@ var promise = import("module-name");
 // ES6, only scans node_modules if using babel, this may change in future, ES Module (ESM) format
 import { config, configurations } from "./config.js";
 //import * as greetings from "./exports.js";
+
 import greetings from "./exports.js";
 
+// node-fetch must be registered in package.json in order to be imported without a full path
+import fetch from "node-fetch";
 
 console.log(configurations['sandbox'].username);
 console.log(config.username);

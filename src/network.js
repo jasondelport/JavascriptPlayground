@@ -5,7 +5,15 @@
 
 // should probably use axios instead!!
 // https://github.com/axios/axios
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
+import axios from 'axios';
+
+const instance = axios.create({
+      baseURL: 'https://jsonplaceholder.typicode.com/',
+      timeout: 20000,
+      withCredentials: false,
+      headers: { 'token': 'hello world' },
+  });
 
 async function fetchUsers(endpoint) {
 	console.log(endpoint);
@@ -81,6 +89,14 @@ async function fetchUsersBroken(endpoint) {
 	return data;
 	*/
 }
+
+async function run() {
+	let resp = await instance.get(`users`);
+	console.log('AXIOS DATA');
+	console.log(resp.data);
+}
+
+run();
 
 const data = fetchUsers('https://jsonplaceholder.typicode.com/users');
 data.then(resp => console.log('response -> ', resp));

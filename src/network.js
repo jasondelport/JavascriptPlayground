@@ -3,7 +3,8 @@
 // https://developer.mozilla.org/en-US/docs/Web/API/Response
 
 
-
+// should probably use axios instead!!
+// https://github.com/axios/axios
 const fetch = require('node-fetch');
 
 async function fetchUsers(endpoint) {
